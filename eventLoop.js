@@ -14,7 +14,7 @@ function startMeUp(param) {
 
 const start = startMeUp('KCDC 2019');
 
-class Stack {
+class Loop {
   get messages() {
     return this._messages;
   }
@@ -33,6 +33,12 @@ class Stack {
       this.waitForMessages(false);
     }
   }
+
+  loop() {
+    if (this.waitForMessages()) {
+      this.execute();
+    }
+  }
   constructor(messages) {
     this._waitForMessages = true;
     this._messages = messages;
@@ -41,23 +47,17 @@ class Stack {
 
 const messages = [
   function() {
-start
-;},
+    start;
+  },
   function() {
-startMeUp('KCDC 2019');
-},
+    startMeUp('KCDC 2019');
+  },
   function() {
-doingThing();
-},
+    doingThing();
+  },
   function() {
-callingMe('hello', 'world');
-},
+    callingMe('hello', 'world');
+  },
 ];
-
-const loopExample = function eventLoop(queue) {
-  while (queue.waitForMessages()) {
-    queue.execute();
-  }
-};
-
-loopExample(new Stack(messages));
+const loop = new Loop(messages);
+loop.loop();

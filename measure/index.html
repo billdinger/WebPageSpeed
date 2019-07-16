@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Hello KCDC 2019!</title>
+        <script src="measure_basic.js"></script>
+    </head>
+    <body style="margin: 0px; padding: 0px; border:0px">
+        <script defer src="work.js"></script>
+        <h1 style="align-content: center">Hello KCDC 2019!</h1>
+        <div style="float: left; width: 33%">
+            <button type="button" name="async" onclick="networkWork(true)">Click me for an async call</button>
+            <button type="button" name="sync" onclick="networkWork(false)">Click me for a sync call.</button>
+        </div>
+        <div style="float: left; width: 33%">
+            Results: <br />
+            <div id="results" style="border:darkgreen, 1px">
+            </div>
+        </div>
+        <div style="float: left; width: 33%">
+                Fetch Results: <br />
+                <div id="fetchresults" style="border:darkgreen, 1px">
+                </div>
+        </div>
+    </body>
+</html>

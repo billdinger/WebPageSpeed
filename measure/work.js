@@ -24,23 +24,22 @@ const networkWork = function(async) {
 
 (function() {
   const commentsRunning = registerPerformance('comments running');
-  const jsonResult = fetch('https://jsonplaceholder.typicode.com/comments')
-      .then(function(response) {
-        results('fetch', 'retrieved the JSON results.');
-        const result = response.json();
-        results('fetch', 'finished parsing the json.');
-        return result;
-      });
+  const jsonResult = fetch('https://jsonplaceholder.typicode.com/comments').then(function(response) {
+    results('fetch', 'retrieved the JSON results.');
+    const result = response.json();
+    results('fetch', 'finished parsing the json.');
+    return result;
+  });
   commentsRunning();
 
   // 1. download some data.
   networkWork(true, 'https://jsonplaceholder.typicode.com/comments');
 
   // 2.) insert some data into the dom.
-  jsonResult.then((data) => {
+  jsonResult.then(data => {
     const json = registerPerformance('json');
     const resultsEle = document.getElementById('fetchresults');
-    data.forEach((comment) => {
+    data.forEach(comment => {
       const item = document.createElement('p');
       item.innerHTML = `Name: ${comment.name} Email: ${comment.email}`;
       resultsEle.appendChild(item);

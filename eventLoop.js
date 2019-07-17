@@ -1,4 +1,3 @@
-
 function callingMe(first, second) {
   console.log(`Calling me with ${first} and ${second}`);
 }
@@ -57,7 +56,7 @@ const messages = [
   },
   function() {
     callingMe('hello', 'world');
-  },
+  }
 ];
 const loop = new Loop(messages);
 loop.loop();

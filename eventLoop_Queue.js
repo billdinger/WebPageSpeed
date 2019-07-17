@@ -1,4 +1,3 @@
-
 const here = () => {
   console.log('Here.');
 };
@@ -59,7 +58,7 @@ const messages = [
   },
   function() {
     there;
-  },
+  }
 ];
 const queue = [
   function() {
@@ -67,7 +66,7 @@ const queue = [
   },
   function() {
     interval;
-  },
+  }
 ];
 const loop = new Loop(messages);
 loop.loop(messages, queue);

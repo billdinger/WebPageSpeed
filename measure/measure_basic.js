@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const registerPerformance = function(markName) {
   const endName = `END_${markName}`;
   const measureName = `MEASURE_${markName}`;
@@ -9,5 +10,3 @@ const registerPerformance = function(markName) {
     console.log(window.performance.getEntriesByName(measureName, 'measure'));
   };
 };
-
-

@@ -23,11 +23,10 @@ nonBlockingAThing();
 doingAThing('end');
 console.log(`*** Done with non-blocking demo. ***`);
 
-
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout,
+  output: process.stdout
 });
 rl.question('Press any key to quit.', () => {
   console.log('quitting.');

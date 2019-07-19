@@ -1,0 +1,28 @@
+# Run as: docker-compose.yml
+version: "3.4"
+networks:
+ demo:
+   driver: bridge
+services:
+  test_server:
+   container_name: test_server
+   image: webpagetest/server:release
+   environment:
+    - "CQ_JVM_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=7777 -server -Xmx1524M -Xms1200M -Djava.awt.headless=true"
+   ports:
+    - "4000"
+   networks:
+     - demo
+  test_agent:
+    container_name: test_agent
+    image: webpagetest/agent:release
+    ports:
+     - "443:443"
+     - "80:80"
+    networks:
+      - demo
+    environment:
+      - 'SERVER_URL=http://localhost:4000/work/j'
+      - "LOCATION=Test"
+    depends_on:
+      - test_server

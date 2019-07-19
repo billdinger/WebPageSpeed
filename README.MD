@@ -1,10 +1,9 @@
 # I Feel the Need for Webpage Speed
-
-This is a demo project for some key concepts regarding web page speed and the associated talk. To run, it just requires
-Node.
+This is a demo project for some key concepts regarding web page speed and the associated talk. To run, it just requires Node 10 or later installed..
 
 ## Setup 
-There are a series of demos
+Below are the steps to start up the demos & index page!
+
 1. `npm install`
 2. `npm start`
 

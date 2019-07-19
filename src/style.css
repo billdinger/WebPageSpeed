@@ -1,0 +1,15 @@
+@media only print and (max-width: 800px) {
+    body {
+      background-color: green;
+      color: black;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+@media (min-width: 768px) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+

@@ -4,7 +4,7 @@
   "description": "Demo Project for webpage speed!",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./measure -p 8080 -o",
+    "start": "http-server ./src/measure/ -p 8080 -o",
     "pretty": "prettier **/*.js --write"
   },
   "repository": {

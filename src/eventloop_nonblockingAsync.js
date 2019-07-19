@@ -12,7 +12,7 @@ const nonBlockingAThing = function() {
   request.onloadend = () => {
     console.log('Non Blocking complete!');
   };
-  request.open('GET', 'https://apps.myconf.app/api/conferences/kcdc2019/Conference', true);
+  request.open('GET', 'https://jsonplaceholder.typicode.com/comments', true);
   request.send();
 };
 

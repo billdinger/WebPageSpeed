@@ -11,7 +11,7 @@ function startMeUp(param) {
   doingThing();
 }
 
-const start = startMeUp('KCDC 2019');
+const start = startMeUp('Attendee Demo!');
 
 class Loop {
   get messages() {
@@ -49,7 +49,7 @@ const messages = [
     start;
   },
   function() {
-    startMeUp('KCDC 2019');
+    startMeUp('Attendee Demo');
   },
   function() {
     doingThing();

@@ -12,7 +12,7 @@ const blockingAThing = function() {
   request.onloadstart = () => {
     console.log('Starting a blocking HTTP Request.');
   };
-  request.open('GET', 'https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"', false);
+  request.open('GET', 'https://drive.google.com/open?id=1vuXOzkaGWd-mJHmA_UW08j-7AoCQ0Wed', false);
   request.send();
 };
 

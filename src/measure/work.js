@@ -18,7 +18,7 @@ const networkWork = function(async) {
   request.onloadstart = () => {
     results('networkWork', `Starting a async: ${async} HTTP Request.`);
   };
-  request.open('GET', 'https://jsonplaceholder.typicode.com/comments', async);
+  request.open('GET', 'https://jsonplaceholder.typicode.com/comments', false);
   request.send();
 };
 

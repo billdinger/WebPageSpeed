@@ -73,7 +73,7 @@ const networkWork = function(async) {
   const done = registerPerformance('page load');
 
   // 2.) download some data from the intertubes.
-   networkWork(true, 'https://jsonplaceholder.typicode.com/comments');
+  networkWork(true, 'https://jsonplaceholder.typicode.com/comments');
 
   // 3.) all done.
   done();
